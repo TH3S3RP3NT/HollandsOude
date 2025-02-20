@@ -13,6 +13,8 @@ BASE_DIR = pathlib.Path(__file__).parent
 
 CMDS_DIR = BASE_DIR / "cmds"
 COGS_DIR = BASE_DIR / "cogs"
+LOG_DIR =  BASE_DIR / 'logs'
+os.makedirs(LOG_DIR, CMDS_DIR, COGS_DIR, exist_ok=True)
 
 
 LOGGING_CONFIG = {
