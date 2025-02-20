@@ -7,7 +7,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 DISCORD_API_SECRET = os.getenv('DISCORD_API_TOKEN')
-
+LOG_DIR = 'logs'
+os.makedirs(LOG_DIR, exist_ok=True)
 
 LOGGING_CONFIG = {
     'version': 1,
