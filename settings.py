@@ -8,12 +8,13 @@ import discord
 load_dotenv()
 
 DISCORD_API_SECRET = os.getenv('DISCORD_API_TOKEN')
+GUILDS_ID = int(os.getenv("GUILDS_ID"))
 
 BASE_DIR = pathlib.Path(__file__).parent
 CMDS_DIR = BASE_DIR / "cmds"
 COGS_DIR = BASE_DIR / "cogs"
 LOG_DIR = BASE_DIR / 'logs'
-os.makedirs(LOG_DIR, CMDS_DIR, COGS_DIR, exist_ok=True)
+os.makedirs(LOG_DIR, exist_ok=True)
 
 LOGGING_CONFIG = {
     "version": 1,
@@ -52,6 +53,5 @@ LOGGING_CONFIG = {
         },
     },
 }
-
 
 dictConfig(LOGGING_CONFIG)
